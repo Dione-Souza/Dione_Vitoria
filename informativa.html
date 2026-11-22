@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c1a">
   <meta name="description" content="Literatura informativa do Quinhentismo: a Carta de Pero Vaz de Caminha e os relatos de viajantes sobre o Brasil.">
   <title>Literatura informativa — Quinhentismo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="barra-progresso" aria-hidden="true"></div>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
@@ -25,6 +27,7 @@
           <li><a href="video.html">Vídeo</a></li>
         </ul>
       </nav>
+      <button class="alternar-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false"><span class="icone-tema" aria-hidden="true">☾</span><span class="texto-tema">Tema escuro</span></button>
     </div>
   </header>
 
@@ -161,8 +164,53 @@
     <div class="container">
       <p><strong>Projeto Prático — Web Design e Multimídia</strong> · 1º ano do Ensino Médio · 2026</p>
       <p>Integrantes: Dione Vitoria FIdencio e Vitoria Padilha Chaves</p>
-      <p>Fontes de pesquisa:</p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const chave = "quinhentismo-tema";
+      const botao = document.querySelector(".alternar-tema");
+      const aplicar = (tema) => {
+        document.body.classList.toggle("tema-escuro", tema === "escuro");
+        if (botao) {
+          const escuro = tema === "escuro";
+          botao.setAttribute("aria-pressed", String(escuro));
+          botao.setAttribute("aria-label", escuro ? "Ativar tema claro" : "Ativar tema escuro");
+          botao.querySelector(".icone-tema").textContent = escuro ? "☀" : "☾";
+          botao.querySelector(".texto-tema").textContent = escuro ? "Tema claro" : "Tema escuro";
+        }
+      };
+      let salvo = "claro";
+      try { salvo = localStorage.getItem(chave) || "claro"; } catch (e) {}
+      aplicar(salvo);
+      botao?.addEventListener("click", () => {
+        const proximo = document.body.classList.contains("tema-escuro") ? "claro" : "escuro";
+        aplicar(proximo);
+        try { localStorage.setItem(chave, proximo); } catch (e) {}
+      });
+    })();
+  </script>
+  <script>
+    // Realce suave dos elementos conforme entram na tela.
+    const observador = new IntersectionObserver((itens) => {
+      itens.forEach((item) => {
+        if (item.isIntersecting) {
+          item.target.classList.add("visivel");
+          observador.unobserve(item.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".card, .destaque, .reflexao, .figura, .hero-figura, .linha-tempo li")
+      .forEach((elemento) => {
+        elemento.classList.add("revelar");
+        observador.observe(elemento);
+      });
+    window.addEventListener("scroll", () => {
+      const altura = document.documentElement.scrollHeight - window.innerHeight;
+      const progresso = altura > 0 ? (window.scrollY / altura) * 100 : 0;
+      document.documentElement.style.setProperty("--progresso", progresso + "%");
+    }, { passive: true });
+  </script>
 </body>
 </html>
