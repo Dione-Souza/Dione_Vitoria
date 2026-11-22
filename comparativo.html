@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c1a">
   <meta name="description" content="Comparativo entre a literatura informativa e a literatura jesuítica do Quinhentismo, com tabelas, curiosidades e perguntas.">
   <title>Comparativo — Quinhentismo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="barra-progresso" aria-hidden="true"></div>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
@@ -25,6 +27,7 @@
           <li><a href="video.html">Vídeo</a></li>
         </ul>
       </nav>
+      <button class="alternar-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false"><span class="icone-tema" aria-hidden="true">☾</span><span class="texto-tema">Tema escuro</span></button>
     </div>
   </header>
 
@@ -186,46 +189,32 @@
       </div>
     </section>
 
-    <section class="secao">
+    <section class="secao quiz-secao" id="quiz">
       <div class="container">
-        <h2>Teste seus conhecimentos</h2>
-        <p>Clique em cada pergunta para ver a resposta.</p>
+        <div class="quiz-intro">
+          <p class="sobretitulo">Desafio de interpretação</p>
+          <h2>Você entendeu o Quinhentismo de verdade?</h2>
+          <p>Não basta decorar nomes e datas. Analise situações, compare intenções e perceba o olhar por trás dos textos. São 8 questões; cada resposta vem com uma explicação.</p>
+        </div>
+        <div class="quiz-painel" id="quiz-painel" aria-live="polite">
+          <div class="quiz-topo"><span id="quiz-etapa">QUESTÃO 01 / 08</span><span id="quiz-pontos">0 pontos</span></div>
+          <div class="quiz-trilho"><span id="quiz-progresso"></span></div>
+          <p class="quiz-categoria" id="quiz-categoria">LEITURA E CONTEXTO</p>
+          <h3 id="quiz-pergunta">Carregando desafio...</h3>
+          <div class="quiz-opcoes" id="quiz-opcoes"></div>
+          <div class="quiz-retorno" id="quiz-retorno" hidden></div>
+          <div class="quiz-acoes"><span id="quiz-aviso">Escolha uma alternativa para continuar.</span><button class="botao" id="quiz-proximo" type="button" disabled>Confirmar resposta</button></div>
+        </div>
+        <div class="quiz-rodape"><span>✦</span> Dica: pense sempre em quem escreveu, para quem escreveu e com qual objetivo.</div>
 
-        <details>
-          <summary>1. Por que o período se chama Quinhentismo?</summary>
-          <p>Porque abrange o século XVI, os anos “quinhentos”, de 1500 a 1601 por convenção.</p>
-        </details>
-        <details>
-          <summary>2. Qual documento é considerado a “certidão de nascimento” do Brasil?</summary>
-          <p>A Carta de Pero Vaz de Caminha ao rei D. Manuel I, escrita em 1500.</p>
-        </details>
-        <details>
-          <summary>3. Qual é a principal finalidade da literatura jesuítica?</summary>
-          <p>A catequese: ensinar a fé cristã e converter os indígenas, além de educar os colonos.</p>
-        </details>
-        <details>
-          <summary>4. Que obra de Anchieta é a primeira gramática de uma língua indígena brasileira?</summary>
-          <p>A <em>Arte de Gramática da Língua mais usada na Costa do Brasil</em>, publicada em 1595.</p>
-        </details>
-        <details>
-          <summary>5. Por que se diz que os textos do Quinhentismo têm um olhar eurocêntrico?</summary>
-          <p>Porque foram escritos por europeus, que descreviam a terra e os povos indígenas com os valores do Velho Mundo. Os próprios indígenas não aparecem como autores.</p>
-        </details>
-
-        <h2>Glossário</h2>
+        <h2 class="glossario-titulo">Glossário essencial</h2>
         <dl class="glossario">
-          <dt>Catequese</dt>
-          <dd>Ensino da doutrina cristã com o objetivo de converter pessoas à religião.</dd>
-          <dt>Eurocentrismo</dt>
-          <dd>Modo de ver o mundo que toma os valores e a cultura da Europa como medida para julgar os demais povos.</dd>
-          <dt>Auto</dt>
-          <dd>Peça teatral curta, de tema religioso ou moral, comum na Idade Média e usada pelos jesuítas.</dd>
-          <dt>Redondilha</dt>
-          <dd>Verso curto, de cinco sílabas (redondilha menor) ou sete sílabas (redondilha maior), contadas até a última sílaba tônica.</dd>
-          <dt>Escrivão</dt>
-          <dd>Pessoa encarregada de registrar por escrito os fatos e documentos oficiais, como fez Caminha na frota de Cabral.</dd>
+          <dt>Catequese</dt><dd>Ensino da doutrina cristã com o objetivo de converter pessoas à religião.</dd>
+          <dt>Eurocentrismo</dt><dd>Modo de ver o mundo que toma os valores e a cultura da Europa como medida para julgar os demais povos.</dd>
+          <dt>Auto</dt><dd>Peça teatral curta, de tema religioso ou moral, comum na Idade Média e usada pelos jesuítas.</dd>
+          <dt>Redondilha</dt><dd>Verso curto, de cinco sílabas (redondilha menor) ou sete sílabas (redondilha maior), contadas até a última sílaba tônica.</dd>
+          <dt>Escrivão</dt><dd>Pessoa encarregada de registrar por escrito os fatos e documentos oficiais, como fez Caminha na frota de Cabral.</dd>
         </dl>
-
         <div class="navegacao-paginas">
           <a class="botao botao-secundario" href="jesuitica.html">← Literatura jesuítica</a>
           <a class="botao" href="video.html">Próxima: Vídeo →</a>
@@ -238,8 +227,93 @@
     <div class="container">
       <p><strong>Projeto Prático — Web Design e Multimídia</strong> · 1º ano do Ensino Médio · 2026</p>
       <p>Integrantes: Dione Vitoria Fidencio e Vitoria Padilha Chaves</p>
-      <p>Fontes de pesquisa:</p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const perguntas = [
+        {categoria:"LEITURA E CONTEXTO", pergunta:"Um cronista descreve o litoral, a vegetação e os recursos naturais, pensando em informar autoridades do outro lado do Atlântico. O que mais ajuda a classificar esse relato?", opcoes:["A intenção de registrar a terra para leitores europeus","A tentativa de ensinar regras religiosas por meio de teatro","A criação de versos para serem decorados pelos alunos","A defesa de que os costumes europeus deveriam ser abandonados"], correta:0, explicacao:"A finalidade e o destinatário são pistas centrais: descrever a terra para informar a Coroa e leitores europeus é típico da literatura informativa."},
+        {categoria:"ANÁLISE DE PERSPECTIVA", pergunta:"Ao ler a descrição de um povo indígena feita por um viajante europeu, qual atitude crítica é mais adequada?", opcoes:["Tratar o relato como uma fotografia neutra da realidade","Considerar que valores europeus podem influenciar a descrição","Supor que o autor conhecia igualmente todas as culturas indígenas","Entender que o texto foi escrito pelos próprios indígenas"], correta:1, explicacao:"Os relatos foram produzidos por observadores europeus. Por isso, podem revelar tanto o que viram quanto os valores e julgamentos de sua própria cultura."},
+        {categoria:"COMPARAÇÃO", pergunta:"Dois textos do século XVI falam sobre os povos indígenas. Um descreve hábitos e recursos da terra; o outro usa diálogos e cenas religiosas para transmitir ensinamentos cristãos. Qual leitura faz mais sentido?", opcoes:["Os dois são informativos, pois mencionam indígenas","O primeiro é jesuítico e o segundo é informativo","O primeiro tende a ser informativo; o segundo, jesuítico","Os dois deixam de pertencer ao Quinhentismo por terem objetivos diferentes"], correta:2, explicacao:"A classificação depende do propósito e da forma: descrição da terra e dos povos aponta para a vertente informativa; catequese por diálogos e teatro aponta para a jesuítica."},
+        {categoria:"INTERPRETAÇÃO HISTÓRICA", pergunta:"A Carta de Pero Vaz de Caminha relata a chegada dos portugueses em 1500 e descreve a nova terra ao rei. O que ela permite concluir sobre a produção escrita daquele momento?", opcoes:["A escrita já era principalmente uma expressão da experiência indígena","A produção escrita também servia aos interesses administrativos e informativos da expansão portuguesa","A literatura brasileira já possuía escolas literárias independentes de Portugal","O documento tinha como objetivo central ensinar gramática tupi"], correta:1, explicacao:"A carta foi dirigida ao rei e registra informações sobre a terra e seus habitantes, conectando a escrita aos interesses da expansão portuguesa."},
+        {categoria:"RELAÇÃO ENTRE FORMA E OBJETIVO", pergunta:"Por que o teatro podia ser um recurso eficaz para a atuação dos jesuítas no século XVI?", opcoes:["Porque substituía todos os contatos entre colonizadores e indígenas","Porque transformava relatos de viagem em mapas","Porque permitia transmitir ensinamentos religiosos por meio de falas, personagens e encenações","Porque tinha como objetivo principal catalogar espécies da natureza"], correta:2, explicacao:"Os autos e diálogos tornavam os ensinamentos religiosos encenáveis e acessíveis ao público, funcionando como instrumento de catequese."},
+        {categoria:"AUTORES E OBRAS", pergunta:"Um pesquisador encontra uma gramática da língua mais usada na costa do Brasil, publicada por José de Anchieta em 1595. Qual aspecto do trabalho jesuítico esse documento evidencia?", opcoes:["O interesse em estudar uma língua local como parte da estratégia de comunicação e catequese","A intenção de registrar rotas marítimas para a Coroa","A produção de um inventário de riquezas minerais","A tentativa de narrar a viagem de Cabral em forma de diário"], correta:0, explicacao:"A gramática de Anchieta mostra o estudo da língua indígena como parte da aproximação e da ação missionária dos jesuítas."},
+        {categoria:"PENSAMENTO CRÍTICO", pergunta:"Dizer que o Quinhentismo é uma literatura 'sobre' o Brasil, mais do que uma literatura 'do' Brasil, destaca principalmente que...", opcoes:["os textos foram escritos exclusivamente em línguas indígenas","a maioria dos registros foi produzida por europeus, a partir de seus próprios interesses e perspectivas","não existiam textos sobre a natureza ou os habitantes","todos os autores tinham exatamente a mesma opinião sobre os indígenas"], correta:1, explicacao:"A expressão chama atenção para a autoria e o ponto de vista: os registros conhecidos foram produzidos sobretudo por europeus, e não pelos povos descritos."},
+        {categoria:"SÍNTESE", pergunta:"Uma peça apresenta personagens indígenas, elementos cristãos e uma mensagem moral. Qual interpretação considera melhor a complexidade desse recurso?", opcoes:["A mistura prova que as culturas tinham o mesmo poder e influência","A presença de elementos indígenas significa que a peça não tinha finalidade religiosa","A peça combina referências culturais, mas dentro de um projeto de catequese conduzido pelos jesuítas","O uso de personagens transforma a peça em um diário de navegação"], correta:2, explicacao:"A presença de referências indígenas não elimina o objetivo missionário. A mistura de elementos acontecia dentro de uma ação de catequese e de imposição religiosa."}
+      ];
+      const $ = id => document.getElementById(id);
+      const painel=$('quiz-painel'); if(!painel) return;
+      let indice=0, pontos=0, escolhida=null, respondidas=0;
+      const letras=['A','B','C','D'];
+      function desenhar(){
+        const q=perguntas[indice]; escolhida=null;
+        $('quiz-etapa').textContent=`QUESTÃO ${String(indice+1).padStart(2,'0')} / ${String(perguntas.length).padStart(2,'0')}`;
+        $('quiz-pontos').textContent=`${pontos} ${pontos===1?'ponto':'pontos'}`;
+        $('quiz-progresso').style.width=`${(indice/perguntas.length)*100}%`;
+        $('quiz-categoria').textContent=q.categoria; $('quiz-pergunta').textContent=q.pergunta;
+        $('quiz-retorno').hidden=true; $('quiz-retorno').textContent=''; $('quiz-aviso').textContent='Escolha uma alternativa para continuar.';
+        $('quiz-proximo').disabled=true; $('quiz-proximo').textContent='Confirmar resposta';
+        const op=$('quiz-opcoes'); op.innerHTML='';
+        q.opcoes.forEach((txt,i)=>{const b=document.createElement('button');b.type='button';b.className='quiz-opcao';b.innerHTML=`<span class="quiz-letra">${letras[i]}</span><span></span>`;b.lastElementChild.textContent=txt;b.addEventListener('click',()=>{if(respondidas>indice)return;escolhida=i;op.querySelectorAll('button').forEach(x=>x.classList.remove('selecionada'));b.classList.add('selecionada');$('quiz-proximo').disabled=false;$('quiz-aviso').textContent='Resposta selecionada. Confirme quando estiver pronto.';});op.appendChild(b);});
+      }
+      $('quiz-proximo').addEventListener('click',()=>{
+        if(respondidas===indice){if(escolhida===null)return;const q=perguntas[indice], ok=escolhida===q.correta; if(ok)pontos++;respondidas++;
+          $('quiz-opcoes').querySelectorAll('button').forEach((b,i)=>{b.disabled=true;if(i===q.correta)b.classList.add('correta');else if(i===escolhida)b.classList.add('incorreta');});
+          const r=$('quiz-retorno');r.hidden=false;r.className='quiz-retorno '+(ok?'acertou':'errou');r.innerHTML=`<strong>${ok?'Boa leitura! Você acertou.':'Quase! Vamos entender.'}</strong><p></p>`;r.querySelector('p').textContent=q.explicacao;
+          $('quiz-pontos').textContent=`${pontos} ${pontos===1?'ponto':'pontos'}`;$('quiz-progresso').style.width=`${(respondidas/perguntas.length)*100}%`;$('quiz-aviso').textContent=ok?'Ponto garantido.':'Use a explicação para aprender com a questão.';$('quiz-proximo').textContent=indice===perguntas.length-1?'Ver resultado':'Próxima questão';
+        }else{
+          if(indice<perguntas.length-1){indice++;desenhar();}else resultado();
+        }
+      });
+      function resultado(){const pct=Math.round((pontos/perguntas.length)*100);const faixa=pct===100?'Leitura impecável':pct>=75?'Mandou muito bem':pct>=50?'Boa evolução':'Hora de revisar';painel.innerHTML=`<div class="quiz-resultado"><span class="resultado-selo">✦</span><p class="quiz-categoria">DESAFIO CONCLUÍDO</p><h3>${faixa}</h3><div class="resultado-numero">${pontos}<small> / ${perguntas.length}</small></div><p>Você acertou ${pct}% das questões. ${pct>=75?'Você já consegue relacionar contexto, intenção e perspectiva dos textos.':'Volte às comparações e observe principalmente o objetivo de cada vertente e o ponto de vista dos autores.'}</p><button class="botao" id="quiz-reiniciar" type="button">Jogar novamente</button></div>`;$('quiz-reiniciar').addEventListener('click',()=>window.location.reload());}
+      desenhar();
+    })();
+  </script>
+  <script>
+    (() => {
+      const chave = "quinhentismo-tema";
+      const botao = document.querySelector(".alternar-tema");
+      const aplicar = (tema) => {
+        document.body.classList.toggle("tema-escuro", tema === "escuro");
+        if (botao) {
+          const escuro = tema === "escuro";
+          botao.setAttribute("aria-pressed", String(escuro));
+          botao.setAttribute("aria-label", escuro ? "Ativar tema claro" : "Ativar tema escuro");
+          botao.querySelector(".icone-tema").textContent = escuro ? "☀" : "☾";
+          botao.querySelector(".texto-tema").textContent = escuro ? "Tema claro" : "Tema escuro";
+        }
+      };
+      let salvo = "claro";
+      try { salvo = localStorage.getItem(chave) || "claro"; } catch (e) {}
+      aplicar(salvo);
+      botao?.addEventListener("click", () => {
+        const proximo = document.body.classList.contains("tema-escuro") ? "claro" : "escuro";
+        aplicar(proximo);
+        try { localStorage.setItem(chave, proximo); } catch (e) {}
+      });
+    })();
+  </script>
+  <script>
+    // Realce suave dos elementos conforme entram na tela.
+    const observador = new IntersectionObserver((itens) => {
+      itens.forEach((item) => {
+        if (item.isIntersecting) {
+          item.target.classList.add("visivel");
+          observador.unobserve(item.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".card, .destaque, .reflexao, .figura, .hero-figura, .linha-tempo li")
+      .forEach((elemento) => {
+        elemento.classList.add("revelar");
+        observador.observe(elemento);
+      });
+    window.addEventListener("scroll", () => {
+      const altura = document.documentElement.scrollHeight - window.innerHeight;
+      const progresso = altura > 0 ? (window.scrollY / altura) * 100 : 0;
+      document.documentElement.style.setProperty("--progresso", progresso + "%");
+    }, { passive: true });
+  </script>
 </body>
 </html>
