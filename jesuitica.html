@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Literatura jesuítica do Quinhentismo: José de Anchieta, Manuel da Nóbrega e a catequese no Brasil do século XVI.">
-  <title>Literatura jesuítica — Quinhentismo</title>
+  <meta name="theme-color" content="#101c1a">
+  <meta name="description" content="Literatura informativa do Quinhentismo: a Carta de Pero Vaz de Caminha e os relatos de viajantes sobre o Brasil.">
+  <title>Literatura informativa — Quinhentismo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="barra-progresso" aria-hidden="true"></div>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
@@ -19,66 +21,121 @@
       <nav aria-label="Menu principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
-          <li><a href="informativa.html">Literatura informativa</a></li>
-          <li><a href="jesuitica.html" aria-current="page">Literatura jesuítica</a></li>
+          <li><a href="informativa.html" aria-current="page">Literatura informativa</a></li>
+          <li><a href="jesuitica.html">Literatura jesuítica</a></li>
           <li><a href="comparativo.html">Comparativo</a></li>
           <li><a href="video.html">Vídeo</a></li>
         </ul>
       </nav>
+      <button class="alternar-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false"><span class="icone-tema" aria-hidden="true">☾</span><span class="texto-tema">Tema escuro</span></button>
     </div>
   </header>
 
   <main id="conteudo">
     <section class="cabecalho-pagina">
       <div class="container">
-        <p class="sobretitulo">Vertente 2</p>
-        <h1>Literatura jesuítica: escrever para converter</h1>
-        <p class="lead">Os jesuítas chegaram ao Brasil em 1549 com a missão de catequizar os indígenas e educar os colonos. Para isso, usaram a palavra escrita e falada como instrumento: cartas, poemas, peças de teatro e até uma gramática da língua tupi.</p>
+        <p class="sobretitulo">Vertente 1</p>
+        <h1>Literatura informativa: o Brasil visto pelos viajantes</h1>
+        <p class="lead">Também chamada de literatura de viagem ou documental, reúne textos de navegadores, escrivães, cronistas e aventureiros que queriam responder a perguntas práticas: o que a terra tem? Que povos vivem nela? O que ela pode render?</p>
       </div>
     </section>
 
     <section class="secao">
       <div class="container">
-        <div class="duas-colunas">
-          <div>
-            <h2>Escrita a serviço da fé</h2>
-            <p>A Companhia de Jesus fundou colégios e aldeamentos e viu na literatura uma forma de aproximar-se das pessoas. Os textos jesuíticos têm finalidade <strong>catequética</strong> (ensinar a fé cristã) e <strong>pedagógica</strong> (ensinar a ler, a rezar e a se comportar segundo os valores da Igreja).</p>
-            <p>Na forma, são marcados por influências medievais, como os versos curtos chamados redondilhas (de cinco e sete sílabas) e os autos, peças religiosas e moralizantes.</p>
-          </div>
-          <figure class="figura">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Benedito_Calixto_-_Retrato_do_Padre_Jos%C3%A9_de_Anchieta.jpg" width="500" height="400" alt="Ilustração de um livro aberto sob uma cruz dourada, entre duas palmeiras, sobre fundo verde.">
-            <figcaption>Ilustração: o livro e a cruz, símbolos da catequese jesuítica.</figcaption>
-          </figure>
+        <h2>Características</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Caráter documental</h3>
+            <p>Os textos descrevem com detalhes a paisagem, as plantas, os animais e as riquezas da terra.</p>
+          </article>
+          <article class="card card-mar">
+            <h3>Olhar europeu</h3>
+            <p>O autor julga o que vê com os valores do Velho Mundo. É o chamado eurocentrismo.</p>
+          </article>
+          <article class="card card-ouro">
+            <h3>Deslumbramento</h3>
+            <p>A natureza aparece como paraíso: fértil, abundante e cheia de novidades para quem vinha da Europa.</p>
+          </article>
+          <article class="card card-urucum">
+            <h3>Interesse econômico</h3>
+            <p>Há atenção constante ao que pode ser explorado: ouro, pau-brasil, terras para cultivar e mão de obra.</p>
+          </article>
+        </div>
+        <div class="destaque">
+          <p><strong>Como aparece o indígena?</strong> Ora como inocente e dócil, pronto para ser convertido (como na Carta de Caminha), ora como selvagem, nos relatos que insistem em costumes estranhos aos europeus, como a antropofagia.</p>
         </div>
       </div>
     </section>
 
     <section class="secao secao-alt">
       <div class="container">
-        <h2>José de Anchieta (1534–1597)</h2>
-        <p>Nascido em San Cristóbal de La Laguna, nas Ilhas Canárias, Anchieta estudou em Coimbra e chegou ao Brasil em 1553, ainda muito jovem. Participou da fundação do colégio de São Paulo de Piratininga, em 1554, e dedicou a vida à catequese. Morreu em Reritiba, no atual Espírito Santo, cidade que hoje leva seu nome. Foi canonizado em 2014.</p>
-        <p>Escrevia em português, espanhol, latim e tupi, e é o principal nome da literatura jesuítica.</p>
+        <h2>A Carta de Pero Vaz de Caminha</h2>
+        <div class="duas-colunas">
+          <div>
+            <p>Caminha era escrivão da frota de Pedro Álvares Cabral. Em <strong>1º de maio de 1500</strong>, em Porto Seguro, escreveu ao rei D. Manuel I contando o que a expedição tinha encontrado. A carta é considerada o documento fundador da nossa literatura (e, por isso, a “certidão de nascimento” do Brasil).</p>
+            <p>O que ela conta:</p>
+            <ul>
+              <li>a chegada ao litoral, com a vista do Monte Pascoal, em 22 de abril;</li>
+              <li>o primeiro encontro com os indígenas, descritos como pessoas nuas, enfeitadas com penas e pinturas, e vistas por Caminha como inocentes;</li>
+              <li>a primeira missa, celebrada no domingo de Páscoa;</li>
+              <li>a fertilidade da terra e a esperança de que ela rendesse bons frutos.</li>
+            </ul>
+          </div>
+          <figure class="figura">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Carta-caminha-folio13v.jpg" width="500" height="400" alt="Ilustração de uma carta antiga em pergaminho, com linhas de texto, selo de cera vermelho e uma pena de escrever.">
+            <figcaption>Ilustração: a Carta foi escrita à mão, em Porto Seguro, e levada a Lisboa por um navio da frota.</figcaption>
+          </figure>
+        </div>
 
+        <blockquote>
+          Sobre a terra, Caminha afirma que, “querendo-a aproveitar, dar-se-á nela tudo”, ideia que mais tarde virou o ditado “em se plantando, tudo dá”.
+          <cite>Carta de Pero Vaz de Caminha, 1500 (trecho com ortografia atualizada)</cite>
+        </blockquote>
+
+        <p>Para Caminha, o “melhor fruto” da nova terra seria salvar a gente que nela vivia, isto é, convertê-la ao cristianismo. Nas últimas linhas, o escrivão aproveita para fazer um pedido pessoal ao rei: o perdão para o genro, Jorge de Osório, exilado na ilha de São Tomé.</p>
+        <p>A carta ficou guardada no arquivo da Torre do Tombo, em Lisboa, e só foi publicada em 1817, mais de trezentos anos depois de escrita.</p>
+
+        <h3>A rota da frota de Cabral</h3>
+        <figure class="figura">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Cabral_voyage_1500_PT.png" width="600" height="400" alt="Mapa esquemático do Atlântico com uma rota pontilhada de Lisboa, passando por Cabo Verde, até Porto Seguro, no Brasil.">
+          <figcaption>Mapa esquemático (sem escala): a frota partiu de Lisboa em 9 de março de 1500 e avistou o litoral brasileiro em 22 de abril.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="container">
+        <h2>Outros textos informativos</h2>
         <div class="cards">
-          <article class="card card-urucum">
-            <h3>Teatro</h3>
-            <p class="obra">Auto de São Lourenço · Na Festa de São Lourenço · Auto da Pregação Universal</p>
-            <p>Peças curtas, encenadas ao ar livre em festas religiosas, com música e dança. Misturam santos, anjos, diabos e personagens indígenas, e usam o tupi para aproximar o público da mensagem cristã.</p>
+          <article class="card card-mar">
+            <h3>Pero Lopes de Sousa</h3>
+            <p class="obra">Diário de Navegação (1530–1532)</p>
+            <p>Registro da expedição de Martim Afonso de Sousa ao litoral brasileiro.</p>
           </article>
-          <article class="card card-urucum">
-            <h3>Poesia</h3>
-            <p class="obra">De Beata Virgine Dei Matre Maria</p>
-            <p>Poema em latim em louvor à Virgem Maria. Conta a tradição que Anchieta o compôs de memória, na areia da praia de Iperoig, enquanto estava no meio das negociações de paz com os tamoios, em 1563.</p>
+          <article class="card card-mar">
+            <h3>Pero de Magalhães Gândavo</h3>
+            <p class="obra">História da Província de Santa Cruz (1576)</p>
+            <p>Descreve a terra de forma entusiasmada, com o objetivo de atrair colonos portugueses.</p>
           </article>
-          <article class="card card-urucum">
-            <h3>Gramática</h3>
-            <p class="obra">Arte de Gramática da Língua mais usada na Costa do Brasil (1595)</p>
-            <p>A primeira gramática de uma língua indígena brasileira, o tupi. Serviu para que os missionários aprendessem a língua e pregassem aos indígenas.</p>
+          <article class="card card-mar">
+            <h3>Gabriel Soares de Sousa</h3>
+            <p class="obra">Tratado Descritivo do Brasil em 1587</p>
+            <p>Levantamento minucioso da geografia, das plantas, dos animais e dos povos da Bahia e arredores.</p>
           </article>
-          <article class="card card-urucum">
-            <h3>Cartas</h3>
-            <p class="obra">Cartas, informações e sermões</p>
-            <p>Escritas aos superiores da Companhia, são ao mesmo tempo relatos religiosos e documentos históricos sobre a vida na colônia.</p>
+          <article class="card card-mar">
+            <h3>Hans Staden</h3>
+            <p class="obra">Duas Viagens ao Brasil (1557)</p>
+            <p>Relato de um alemão que ficou prisioneiro dos tupinambás e voltou à Europa para contar sua história.</p>
+          </article>
+          <article class="card card-mar">
+            <h3>André Thevet</h3>
+            <p class="obra">As Singularidades da França Antártica (1557)</p>
+            <p>Obra de um frade francês sobre a colônia francesa que existiu na baía de Guanabara.</p>
+          </article>
+          <article class="card card-mar">
+            <h3>Jean de Léry</h3>
+            <p class="obra">Viagem à Terra do Brasil (1578)</p>
+            <p>Relato de um calvinista francês, rico em observações sobre os costumes indígenas.</p>
           </article>
         </div>
       </div>
@@ -86,34 +143,18 @@
 
     <section class="secao">
       <div class="container">
-        <h2>Manuel da Nóbrega (1517–1570)</h2>
-        <p>Português, Nóbrega liderou o primeiro grupo de jesuítas, que chegou à Bahia em 1549, e foi o primeiro provincial da Companhia no Brasil. Suas <em>Cartas do Brasil</em> descrevem a colônia e as dificuldades da missão. Em <em>Diálogo sobre a Conversão do Gentio</em> (c. 1557), dois padres conversam sobre como converter os indígenas, em um texto que mostra bem as ideias da época.</p>
-
-        <h2>Características da literatura jesuítica</h2>
-        <ul>
-          <li><strong>Finalidade religiosa e educativa:</strong> o texto existe para ensinar e converter.</li>
-          <li><strong>Mistura de línguas:</strong> português, espanhol, latim e tupi aparecem juntos.</li>
-          <li><strong>Forma medieval:</strong> versos em redondilha, autos e alegorias.</li>
-          <li><strong>Elementos indígenas e cristãos misturados:</strong> nomes, costumes e entidades indígenas entram nas peças, muitas vezes no papel de “demônios”.</li>
-          <li><strong>Visão do indígena:</strong> uma alma a ser salva; costumes como a poligamia, a antropofagia e a pajelança são tratados como pecado.</li>
-        </ul>
-
-        <div class="destaque">
-          <p><strong>Um olhar crítico:</strong> aprender o tupi foi uma estratégia inteligente de aproximação, mas a catequese também significou impor uma religião e uma cultura a povos que tinham as suas. Entender os dois lados ajuda a ler esses textos com mais maturidade.</p>
-        </div>
-
         <div class="reflexao">
           <h3>Para refletir</h3>
           <ul>
-            <li>Por que usar o tupi no teatro ajudava na catequese?</li>
-            <li>O que a presença de personagens indígenas nos autos revela sobre o olhar do jesuíta?</li>
-            <li>Em que a literatura jesuítica se diferencia da literatura de viagem?</li>
+            <li>Por que a Carta de Caminha é considerada o documento fundador da literatura feita no Brasil?</li>
+            <li>Que valores europeus aparecem no modo como Caminha descreve os indígenas?</li>
+            <li>O que muda quando um relato é escrito por um viajante estrangeiro, como Staden ou Léry?</li>
           </ul>
         </div>
 
         <div class="navegacao-paginas">
-          <a class="botao botao-secundario" href="informativa.html">← Literatura informativa</a>
-          <a class="botao" href="comparativo.html">Próxima: Comparativo →</a>
+          <a class="botao botao-secundario" href="index.html">← Início</a>
+          <a class="botao" href="jesuitica.html">Próxima: Literatura jesuítica →</a>
         </div>
       </div>
     </section>
@@ -122,9 +163,54 @@
   <footer class="rodape">
     <div class="container">
       <p><strong>Projeto Prático — Web Design e Multimídia</strong> · 1º ano do Ensino Médio · 2026</p>
-      <p>Integrantes: Dione Vitoria Fidencio e Vitoria Padilha Chaves</p>
-      <p>Fontes de pesquisa:</p>
+      <p>Integrantes: Dione Vitoria FIdencio e Vitoria Padilha Chaves</p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const chave = "quinhentismo-tema";
+      const botao = document.querySelector(".alternar-tema");
+      const aplicar = (tema) => {
+        document.body.classList.toggle("tema-escuro", tema === "escuro");
+        if (botao) {
+          const escuro = tema === "escuro";
+          botao.setAttribute("aria-pressed", String(escuro));
+          botao.setAttribute("aria-label", escuro ? "Ativar tema claro" : "Ativar tema escuro");
+          botao.querySelector(".icone-tema").textContent = escuro ? "☀" : "☾";
+          botao.querySelector(".texto-tema").textContent = escuro ? "Tema claro" : "Tema escuro";
+        }
+      };
+      let salvo = "claro";
+      try { salvo = localStorage.getItem(chave) || "claro"; } catch (e) {}
+      aplicar(salvo);
+      botao?.addEventListener("click", () => {
+        const proximo = document.body.classList.contains("tema-escuro") ? "claro" : "escuro";
+        aplicar(proximo);
+        try { localStorage.setItem(chave, proximo); } catch (e) {}
+      });
+    })();
+  </script>
+  <script>
+    // Realce suave dos elementos conforme entram na tela.
+    const observador = new IntersectionObserver((itens) => {
+      itens.forEach((item) => {
+        if (item.isIntersecting) {
+          item.target.classList.add("visivel");
+          observador.unobserve(item.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".card, .destaque, .reflexao, .figura, .hero-figura, .linha-tempo li")
+      .forEach((elemento) => {
+        elemento.classList.add("revelar");
+        observador.observe(elemento);
+      });
+    window.addEventListener("scroll", () => {
+      const altura = document.documentElement.scrollHeight - window.innerHeight;
+      const progresso = altura > 0 ? (window.scrollY / altura) * 100 : 0;
+      document.documentElement.style.setProperty("--progresso", progresso + "%");
+    }, { passive: true });
+  </script>
 </body>
 </html>
