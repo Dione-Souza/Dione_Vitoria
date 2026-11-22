@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101c1a">
   <meta name="description" content="Vídeo do grupo explicando o Quinhentismo.">
   <title>Vídeo — Quinhentismo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="barra-progresso" aria-hidden="true"></div>
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
@@ -25,6 +27,7 @@
           <li><a href="video.html" aria-current="page">Vídeo</a></li>
         </ul>
       </nav>
+      <button class="alternar-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false"><span class="icone-tema" aria-hidden="true">☾</span><span class="texto-tema">Tema escuro</span></button>
     </div>
   </header>
 
@@ -61,41 +64,20 @@
           <div class="video-espaco">
             <div class="play" aria-hidden="true"></div>
             <p class="titulo-espaco">Espaço reservado para o vídeo do grupo</p>
-            <p>Duração: de 2 a 5 minutos · Todos os integrantes aparecem</p>
+            <p>O vídeo do projeto será exibido aqui.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="secao secao-alt">
+    <section class="secao video-final">
       <div class="container">
-        <div class="cards">
-          <article class="card">
-            <h3>O que o vídeo aborda</h3>
-            <ul>
-              <li>O que foi o Quinhentismo e quando aconteceu;</li>
-              <li>A literatura informativa e a Carta de Caminha;</li>
-              <li>A literatura jesuítica e José de Anchieta;</li>
-              <li>As diferenças entre as duas vertentes.</li>
-            </ul>
-          </article>
-          <article class="card card-urucum">
-            <h3>Ficha técnica</h3>
-            <dl class="ficha">
-              <dt>Duração</dt>
-              <dd>[mm:ss]</dd>
-              <dt>Roteiro</dt>
-              <dd>[Nome do aluno]</dd>
-              <dt>Gravação</dt>
-              <dd>[Nome do aluno]</dd>
-              <dt>Edição</dt>
-              <dd>[Nome do aluno] · programa: [nome do editor]</dd>
-              <dt>Apresentação</dt>
-              <dd>[Nome 1], [Nome 2] e [Nome 3]</dd>
-            </dl>
-          </article>
+        <div class="video-chamada">
+          <span class="video-ornamento" aria-hidden="true">✦</span>
+          <h2>Uma viagem ao início da literatura no Brasil.</h2>
+          <p>O conteúdo ganha outra voz quando é explicado por quem estudou o tema.</p>
+          <a class="botao" href="comparativo.html">Revisar o conteúdo</a>
         </div>
-
         <div class="navegacao-paginas">
           <a class="botao botao-secundario" href="comparativo.html">← Comparativo</a>
           <a class="botao" href="index.html">Voltar ao início</a>
@@ -108,8 +90,53 @@
     <div class="container">
       <p><strong>Projeto Prático — Web Design e Multimídia</strong> · 1º ano do Ensino Médio · 2026</p>
       <p>Integrantes: Dione Vitoria Fidencio e Vitoria Padilha Chaves</p>
-      <p>Fontes de pesquisa:</p>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const chave = "quinhentismo-tema";
+      const botao = document.querySelector(".alternar-tema");
+      const aplicar = (tema) => {
+        document.body.classList.toggle("tema-escuro", tema === "escuro");
+        if (botao) {
+          const escuro = tema === "escuro";
+          botao.setAttribute("aria-pressed", String(escuro));
+          botao.setAttribute("aria-label", escuro ? "Ativar tema claro" : "Ativar tema escuro");
+          botao.querySelector(".icone-tema").textContent = escuro ? "☀" : "☾";
+          botao.querySelector(".texto-tema").textContent = escuro ? "Tema claro" : "Tema escuro";
+        }
+      };
+      let salvo = "claro";
+      try { salvo = localStorage.getItem(chave) || "claro"; } catch (e) {}
+      aplicar(salvo);
+      botao?.addEventListener("click", () => {
+        const proximo = document.body.classList.contains("tema-escuro") ? "claro" : "escuro";
+        aplicar(proximo);
+        try { localStorage.setItem(chave, proximo); } catch (e) {}
+      });
+    })();
+  </script>
+  <script>
+    // Realce suave dos elementos conforme entram na tela.
+    const observador = new IntersectionObserver((itens) => {
+      itens.forEach((item) => {
+        if (item.isIntersecting) {
+          item.target.classList.add("visivel");
+          observador.unobserve(item.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll(".card, .destaque, .reflexao, .figura, .hero-figura, .linha-tempo li")
+      .forEach((elemento) => {
+        elemento.classList.add("revelar");
+        observador.observe(elemento);
+      });
+    window.addEventListener("scroll", () => {
+      const altura = document.documentElement.scrollHeight - window.innerHeight;
+      const progresso = altura > 0 ? (window.scrollY / altura) * 100 : 0;
+      document.documentElement.style.setProperty("--progresso", progresso + "%");
+    }, { passive: true });
+  </script>
 </body>
 </html>
