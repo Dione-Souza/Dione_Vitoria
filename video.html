@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,138 +6,272 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101c1a">
   <meta name="description" content="Vídeo do grupo explicando o Quinhentismo.">
+
   <title>Vídeo — Quinhentismo</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="barra-progresso" aria-hidden="true"></div>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
+<body>
+
+  <div class="barra-progresso" aria-hidden="true"></div>
+
+  <a class="pular" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+  <!-- CABEÇALHO -->
   <header class="topo">
     <div class="container topo-interno">
-      <a class="marca" href="index.html"><span class="marca-selo">1500</span> Quinhentismo</a>
+
+      <a class="marca" href="index.html">
+        <span class="marca-selo">1500</span>
+        Quinhentismo
+      </a>
+
       <nav aria-label="Menu principal">
         <ul class="menu">
           <li><a href="index.html">Início</a></li>
           <li><a href="informativa.html">Literatura informativa</a></li>
           <li><a href="jesuitica.html">Literatura jesuítica</a></li>
           <li><a href="comparativo.html">Comparativo</a></li>
-          <li><a href="video.html" aria-current="page">Vídeo</a></li>
+          <li>
+            <a href="video.html" aria-current="page">Vídeo</a>
+          </li>
         </ul>
       </nav>
-      <button class="alternar-tema" type="button" aria-label="Ativar tema escuro" aria-pressed="false"><span class="icone-tema" aria-hidden="true">☾</span><span class="texto-tema">Tema escuro</span></button>
+
+      <button
+        class="alternar-tema"
+        type="button"
+        aria-label="Ativar tema escuro"
+        aria-pressed="false">
+
+        <span class="icone-tema" aria-hidden="true">☾</span>
+        <span class="texto-tema">Tema escuro</span>
+
+      </button>
+
     </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main id="conteudo">
+
+    <!-- APRESENTAÇÃO -->
     <section class="cabecalho-pagina">
       <div class="container">
+
         <p class="sobretitulo">Multimídia</p>
+
         <h1>O Quinhentismo em vídeo</h1>
-        <p class="lead">Assista ao vídeo do nosso grupo, em que explicamos o assunto com as nossas próprias palavras.</p>
+
+        <p class="lead">
+          Assista ao vídeo do nosso grupo, em que explicamos
+          o assunto com as nossas próprias palavras.
+        </p>
+
       </div>
     </section>
 
+    <!-- VÍDEO DO YOUTUBE -->
     <section class="secao">
       <div class="container">
+
         <div class="video-moldura">
 
-          <!--
-            =====================================================
-            ESPAÇO RESERVADO PARA O VÍDEO DO GRUPO
-            =====================================================
-            Quando o vídeo estiver pronto:
-              1) APAGUE o bloco <div class="video-espaco"> ... </div> logo abaixo;
-              2) escolha UMA das opções e tire o comentário dela.
+          <iframe
+            src="https://www.youtube.com/embed/bFgr-Pn8C0g"
+            title="Vídeo do grupo — Quinhentismo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
 
-            OPÇÃO A — arquivo local (coloque o arquivo na pasta "video/"
-            com o nome quinhentismo.mp4):
-
-            <video controls preload="metadata">
-              <source src="video/quinhentismo.mp4" type="video/mp4">
-              Seu navegador não consegue reproduzir este vídeo.
-            </video>
-          -->
-
-          <div class="video-espaco">
-            <div class="play" aria-hidden="true"></div>
-            <p class="titulo-espaco">Espaço reservado para o vídeo do grupo</p>
-            <p>O vídeo do projeto será exibido aqui.</p>
-          </div>
         </div>
+
       </div>
     </section>
 
+    <!-- CHAMADA FINAL -->
     <section class="secao video-final">
       <div class="container">
+
         <div class="video-chamada">
+
           <span class="video-ornamento" aria-hidden="true">✦</span>
-          <h2>Uma viagem ao início da literatura no Brasil.</h2>
-          <p>O conteúdo ganha outra voz quando é explicado por quem estudou o tema.</p>
-          <a class="botao" href="comparativo.html">Revisar o conteúdo</a>
+
+          <h2>
+            Uma viagem ao início da literatura no Brasil.
+          </h2>
+
+          <p>
+            O conteúdo ganha outra voz quando é explicado
+            por quem estudou o tema.
+          </p>
+
+          <a class="botao" href="comparativo.html">
+            Revisar o conteúdo
+          </a>
+
         </div>
+
+        <!-- NAVEGAÇÃO ENTRE PÁGINAS -->
         <div class="navegacao-paginas">
-          <a class="botao botao-secundario" href="comparativo.html">← Comparativo</a>
-          <a class="botao" href="index.html">Voltar ao início</a>
+
+          <a class="botao botao-secundario" href="comparativo.html">
+            ← Comparativo
+          </a>
+
+          <a class="botao" href="index.html">
+            Voltar ao início
+          </a>
+
         </div>
+
       </div>
     </section>
+
   </main>
 
+  <!-- RODAPÉ -->
   <footer class="rodape">
     <div class="container">
-      <p><strong>Projeto Prático — Web Design e Multimídia</strong> · 1º ano do Ensino Médio · 2026</p>
-      <p>Integrantes: Dione Vitoria Fidencio e Vitoria Padilha Chaves</p>
+
+      <p>
+        <strong>Projeto Prático — Web Design e Multimídia</strong>
+        · 1º ano do Ensino Médio · 2026
+      </p>
+
+      <p>
+        Integrantes: Dione Vitoria Fidencio e Vitoria Padilha Chaves
+      </p>
+
     </div>
   </footer>
 
+  <!-- SCRIPT DO TEMA CLARO E ESCURO -->
   <script>
     (() => {
+
       const chave = "quinhentismo-tema";
+
       const botao = document.querySelector(".alternar-tema");
+
       const aplicar = (tema) => {
-        document.body.classList.toggle("tema-escuro", tema === "escuro");
+
+        document.body.classList.toggle(
+          "tema-escuro",
+          tema === "escuro"
+        );
+
         if (botao) {
+
           const escuro = tema === "escuro";
-          botao.setAttribute("aria-pressed", String(escuro));
-          botao.setAttribute("aria-label", escuro ? "Ativar tema claro" : "Ativar tema escuro");
-          botao.querySelector(".icone-tema").textContent = escuro ? "☀" : "☾";
-          botao.querySelector(".texto-tema").textContent = escuro ? "Tema claro" : "Tema escuro";
+
+          botao.setAttribute(
+            "aria-pressed",
+            String(escuro)
+          );
+
+          botao.setAttribute(
+            "aria-label",
+            escuro ? "Ativar tema claro" : "Ativar tema escuro"
+          );
+
+          botao.querySelector(".icone-tema").textContent =
+            escuro ? "☀" : "☾";
+
+          botao.querySelector(".texto-tema").textContent =
+            escuro ? "Tema claro" : "Tema escuro";
+
         }
+
       };
+
       let salvo = "claro";
-      try { salvo = localStorage.getItem(chave) || "claro"; } catch (e) {}
+
+      try {
+        salvo = localStorage.getItem(chave) || "claro";
+      } catch (e) {}
+
       aplicar(salvo);
+
       botao?.addEventListener("click", () => {
-        const proximo = document.body.classList.contains("tema-escuro") ? "claro" : "escuro";
+
+        const proximo =
+          document.body.classList.contains("tema-escuro")
+            ? "claro"
+            : "escuro";
+
         aplicar(proximo);
-        try { localStorage.setItem(chave, proximo); } catch (e) {}
+
+        try {
+          localStorage.setItem(chave, proximo);
+        } catch (e) {}
+
       });
+
     })();
   </script>
+
+  <!-- SCRIPT DOS EFEITOS DE ROLAGEM -->
   <script>
+
     // Realce suave dos elementos conforme entram na tela.
+
     const observador = new IntersectionObserver((itens) => {
+
       itens.forEach((item) => {
+
         if (item.isIntersecting) {
+
           item.target.classList.add("visivel");
+
           observador.unobserve(item.target);
+
         }
+
       });
+
     }, { threshold: 0.12 });
-    document.querySelectorAll(".card, .destaque, .reflexao, .figura, .hero-figura, .linha-tempo li")
-      .forEach((elemento) => {
-        elemento.classList.add("revelar");
-        observador.observe(elemento);
-      });
+
+    document.querySelectorAll(
+      ".card, .destaque, .reflexao, .figura, .hero-figura, .linha-tempo li"
+    ).forEach((elemento) => {
+
+      elemento.classList.add("revelar");
+
+      observador.observe(elemento);
+
+    });
+
+    // Barra de progresso da página.
+
     window.addEventListener("scroll", () => {
-      const altura = document.documentElement.scrollHeight - window.innerHeight;
-      const progresso = altura > 0 ? (window.scrollY / altura) * 100 : 0;
-      document.documentElement.style.setProperty("--progresso", progresso + "%");
+
+      const altura =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      const progresso =
+        altura > 0
+          ? (window.scrollY / altura) * 100
+          : 0;
+
+      document.documentElement.style.setProperty(
+        "--progresso",
+        progresso + "%"
+      );
+
     }, { passive: true });
+
   </script>
+
 </body>
 </html>
